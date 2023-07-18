@@ -9,10 +9,10 @@ const OverviewPage = ({ modules }) => {
   };
 
   return (
-    <div className='bg-white'>
-      <div className='relative isolate pt-14 mx-10'>
+    <div className='bg-white h-full'>
+      <div className='relative isolate pt-14 mx-20'>
         <svg
-          className='absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]'
+          className='absolute inset-0 -z-10 h-full w-full stroke-blue-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]'
           aria-hidden='true'>
           <defs>
             <pattern
@@ -39,8 +39,8 @@ const OverviewPage = ({ modules }) => {
           />
         </svg>
 
-        <div className='border-b border-cyan-700 pb-5 mb-10'>
-          <h1 className='mt-10 max-w-lg text-4xl font-bold tracking-tight  sm:text-6xl text-gray-800'>
+        <div className=' pb-5 mb-10'>
+          <h1 className='mt-10 max-w-lg text-4xl tracking-tight  sm:text-6xl text-blue-500 font-bold'>
             Courses Overview
           </h1>
           <p className='mt-5 mb-1 text-2xl font-semibold leading-6 text-gray-500'>
@@ -49,9 +49,9 @@ const OverviewPage = ({ modules }) => {
           </p>
         </div>
 
-        <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10'>
           {modules.slice(0, visibleModules).map((module) => (
-            <div className=' gap 4 mb-10' key={module.uid}>
+            <div className='gap 4 mb-10' key={module.uid}>
               <div className='flex items-center'>
                 <img
                   className='mr-4 inline-block h-14 w-14 rounded-md'
@@ -62,7 +62,7 @@ const OverviewPage = ({ modules }) => {
                   {module.title}
                 </h2>
               </div>
-              <p className='mt-5 mb-1 text-xl font-semibold leading-6 text-gray-500'>
+              <p className='mt-5 mb-1 text-lg font-semibold leading-6 text-gray-500'>
                 {module.summary}
               </p>
               <Link href={`/detail/${module.uid}`} passHref>

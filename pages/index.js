@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { ChevronRightIcon } from '@heroicons/react/20/solid';
+import Link from 'next/link';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -48,11 +47,11 @@ export default function Home() {
               voluptate id. In veniam incididunt ex veniam adipisicing sit.
             </p>
             <div className='mt-10 flex items-center gap-x-6'>
-              <a
+              <Link
                 href='/courses'
                 className='rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
                 Get started
-              </a>
+              </Link>
             </div>
           </div>
           <div className='mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow'>
